@@ -15,11 +15,12 @@ public class game {
 
     /**
      * finds two word solutions that fits the puzzle (made up of letters within the problem, do not have consecutive letters from the same row)
-     * @param input string in the format xxx,xxx,xxx where x is a unique character
-     * @return an array of two word combinations that solve the game
+     * @param input string in the format xxx,xxx,xxx,xxx where x is a unique character
+     * @return an arrayList of String[] that are two word combinations that solve the game
      */
     public ArrayList<String[]> playGame(String input) {
         ArrayList<String[]> result = new ArrayList<>();
+
         HashMap<Character, ArrayList<String>> puzzlewords = new HashMap<>();
 
         ArrayList<ArrayList<Character>> rows = validator.convertInput(input);
@@ -41,11 +42,6 @@ public class game {
         puzzlewords = checkRows(rows, puzzlewords);
 
         result = solutions(puzzlewords, characterList);
-
-        for(String[] combo: result) {
-            System.out.println(combo[0] + " " + combo[1]);
-        }
-        System.out.println("There are " + result.size() + " possible solutions");
 
         return result;
     }
@@ -98,30 +94,30 @@ public class game {
         HashMap<Character, ArrayList<String>> result = new HashMap<>();
 
         //iterating through a hashmap, for each and lambda
-        words.forEach((key, value) -> {
-            for(String s: value) {
+        words.forEach((key, keyWords) -> {
+            for(String word: keyWords) {
                 boolean validWord = true;
                 
                 //iterate through the characters of the string
-                for(int i =0; i < s.length() - 1; i++) {
+                for(int i =0; i < word.length() - 1; i++) {
                     ArrayList<Character> row = new ArrayList<>();
                     
                     //check which row contains the letter
                     for(ArrayList<Character> r: rows) {
-                        if(r.contains(s.charAt(i))) {
+                        if(r.contains(word.charAt(i))) {
                             row = r;
                         }
                     }
 
                     //if the next character is within the row, then the word is not valid
-                    if(row.contains(s.charAt(i + 1))) {
+                    if(row.contains(word.charAt(i + 1))) {
                         validWord = false;
                         break;
                     }
                 }
                 
                 if(validWord) {
-                    result.computeIfAbsent(key, k -> new ArrayList<>()).add(s);
+                    result.computeIfAbsent(key, k -> new ArrayList<>()).add(word);
                 }
             }
         });
@@ -137,8 +133,8 @@ public class game {
     public ArrayList<String[]> solutions(HashMap<Character, ArrayList<String>> puzzleWords, ArrayList<Character> problemCharacters) {
         ArrayList<String[]> result = new ArrayList<>();
 
-        puzzleWords.forEach((key, value) -> {
-            for(String word1: value) {
+        puzzleWords.forEach((key, keyWords) -> {
+            for(String word1: keyWords) {
                 char lastLetter = word1.charAt(word1.length()-1);
 
                 ArrayList<String> wordStartingWithLastCharacter = puzzleWords.get(lastLetter);
@@ -183,8 +179,14 @@ public class game {
         String input = scanner.nextLine();
 
         long start = System.currentTimeMillis();
-        
-        g.playGame(input);
+
+        ArrayList<String[]> result = g.playGame(input);
+
+        for(String[] combo: result) {
+            System.out.println(combo[0] + " " + combo[1]);
+        }
+        System.out.println("There are " + result.size() + " possible solutions");
+
         long ms = System.currentTimeMillis() - start;
         System.out.println("Time elapsed: " + ms + " ms.");
 
