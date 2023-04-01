@@ -52,6 +52,33 @@ public class game {
      */
     public HashMap<Character, ArrayList<String>> findWordsInProblem(ArrayList<Character> characterList) {
         HashMap<Character, ArrayList<String>> result = new HashMap<>();
+        
+        for(char k : characterList) {
+            char key = k;
+            ArrayList<String> words = fromTxt.get(k);
+            ArrayList<String> puzzleWords = new ArrayList<>();
+
+            if(words == null) {
+                continue;
+            }
+            
+            for(String word: words) {
+                boolean isValidWord = true;
+                for(int i = 0; i <word.length(); i++) {
+                    char c = word.charAt(i);
+                        if(!characterList.contains(c)) {
+                            isValidWord = false;
+                            break;
+                        }
+                }
+                if(isValidWord) {
+                    puzzleWords.add(word);
+                }
+            }
+
+            result.put(key, puzzleWords);
+
+        }
 
         return result;
     }
