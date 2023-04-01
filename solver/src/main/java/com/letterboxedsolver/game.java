@@ -19,6 +19,28 @@ public class game {
      */
     public ArrayList<String[]> playGame(String input) {
         ArrayList<String[]> result = new ArrayList<>();
+        HashMap<Character, ArrayList<String>> puzzlewords = new HashMap<>();
+
+        ArrayList<ArrayList<Character>> rows = validator.convertInput(input);
+    
+        if(rows == null) {
+            System.out.println("Input is invalid");
+            return null;
+        }
+
+        //list of characters, want to use arraylist since it has the contains method
+        String justLetters = input.replaceAll("[^a-zA-Z]", "").toLowerCase();
+        char[] letterArray = justLetters.toCharArray();
+        ArrayList<Character> characterList = new ArrayList<>();
+        for(char c: letterArray) {
+            characterList.add(c);
+        }
+
+        puzzlewords = findWordsInProblem(characterList);
+
+        //puzzlewords = checkRows(rows, puzzlewords);
+
+        //result = solutions(puzzlewords, characterList);
 
         return result;
     }
