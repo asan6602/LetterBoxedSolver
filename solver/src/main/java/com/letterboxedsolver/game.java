@@ -2,6 +2,7 @@ package com.letterboxedsolver;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class game {
     HashMap<Character, ArrayList<String>> fromTxt;
@@ -40,7 +41,12 @@ public class game {
 
         puzzlewords = checkRows(rows, puzzlewords);
 
-        //result = solutions(puzzlewords, characterList);
+        result = solutions(puzzlewords, characterList);
+
+        for(String[] combo: result) {
+            System.out.println(combo[0] + " " + combo[1]);
+        }
+        System.out.println("There are " + result.size() + " possible solutions");
 
         return result;
     }
@@ -132,6 +138,58 @@ public class game {
     public ArrayList<String[]> solutions(HashMap<Character, ArrayList<String>> puzzleWords, ArrayList<Character> problemCharacters) {
         ArrayList<String[]> result = new ArrayList<>();
 
+        puzzleWords.forEach((key, value) -> {
+            for(String word1: value) {
+                char lastLetter = word1.charAt(word1.length()-1);
+
+                ArrayList<String> wordStartingWithLastCharacter = puzzleWords.get(lastLetter);
+
+                //checking words that beginng with last letter of first word
+                for(String word2: wordStartingWithLastCharacter) {
+                    boolean valid = true;
+                    String combinedWord = word1+word2;
+
+                    ArrayList<Character> combinedList = new ArrayList<Character>();
+                    for (char characterCombined : combinedWord.toCharArray()) {
+                        combinedList.add(characterCombined);
+                    }
+
+                    //check that all problemCharacters are present in the two words
+                    for (char characterProblem: problemCharacters) {
+                        if(!combinedList.contains(characterProblem)) {
+                            valid = false;
+                            break;
+                        }
+                    }
+                    if (valid) {
+                        String[] solution = new String[2];
+                        solution[0] = word1;
+                        solution[1] = word2;
+                        result.add(solution);
+                    }
+                }
+                   
+            }
+        });
+
         return result;
+    }
+
+    public static void main(String args[]) {
+        game g  = new game("solver\\data\\words.txt");
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter problem in format <xxx,xxx,xxx>: ");
+
+        String input = scanner.nextLine();
+
+        long start = System.currentTimeMillis();
+        
+        g.playGame(input);
+        long ms = System.currentTimeMillis() - start;
+        System.out.println("Time elapsed: " + ms + " ms.");
+
+        scanner.close();
+
     }
 }
