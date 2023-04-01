@@ -62,8 +62,8 @@ Step 1)
 Had to change maven version to 1.8 from 1.7 because I used a lambda expression.
 
 Step 2) 
-Split into two methods one to convert into a 2d array and one to check if the input is valid.
-Moved functions into their own class, creating the validator class.
+Split into two methods, one to convert into a 2d array and one to check if the input is valid.
+Moved methods into their own class, creating the validator class.
 
 Step 3)
 I created two helper methods.
