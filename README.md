@@ -1,7 +1,7 @@
 # Changes
 I don’t like that swear words are included in the solution.
 Found a .txt file of bad words and used that to write a new file that does not include these words.
-Copied a program to do from: https://www.geeksforgeeks.org/java-program-delete-certain-text-file/.  Working txt file is cleanWords.txt
+Copied a program to do this from: https://www.geeksforgeeks.org/java-program-delete-certain-text-file/.  Working txt file is cleanWords.txt
 
 # Working Program
 Main located in: src\main\java\letterboxedsolver\game.java
