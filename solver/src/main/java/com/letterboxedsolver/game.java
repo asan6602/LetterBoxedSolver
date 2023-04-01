@@ -38,7 +38,7 @@ public class game {
 
         puzzlewords = findWordsInProblem(characterList);
 
-        //puzzlewords = checkRows(rows, puzzlewords);
+        puzzlewords = checkRows(rows, puzzlewords);
 
         //result = solutions(puzzlewords, characterList);
 
