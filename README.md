@@ -85,4 +85,5 @@ In order to check if the two word solution contains all the characters of the pr
 # Improvements
 * option to solve in more words than 2
 * continue to clean words
+* find a txt file using the Oxford Dictionary of English and read from that one instead
 * Convert to Kotlin using intellij
