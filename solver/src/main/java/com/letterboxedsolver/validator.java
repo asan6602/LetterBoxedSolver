@@ -18,7 +18,7 @@ public class validator {
 
         //check if input is in xxx,xxx,xxx format
         if(!input.matches("[a-zA-Z]{3},[a-zA-Z]{3},[a-zA-Z]{3},[a-zA-Z]{3}")) {
-            System.out.println("Input is invalid because it is not in <xxx,xxx,xxx> format");
+            System.out.println("Input is invalid because it is not in <xxx,xxx,xxx,xxx> format");
             return result;
         }
 
