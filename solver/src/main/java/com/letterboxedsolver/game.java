@@ -176,7 +176,7 @@ public class game {
     }
 
     public static void main(String args[]) {
-        game g  = new game("solver\\data\\words.txt");
+        game g  = new game("solver\\data\\cleanWords.txt");
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter problem in format <xxx,xxx,xxx>: ");
