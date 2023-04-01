@@ -1,5 +1,6 @@
 package com.letterboxedsolver;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -37,6 +38,17 @@ public class validator {
             }
             
         }
+        return result;
+    }
+
+    /**
+     * puts the characters into a 2d ArrayList in order to represent rows
+     * @param input string of unique characters in the format xxx,xxx,xxx 
+     * @return 4 ArrayLists stored in a 2d ArrayList
+     */
+    public ArrayList<ArrayList<Character>> convertInput(String input) {
+        ArrayList<ArrayList<Character>> result =  new ArrayList<ArrayList<Character>>();
+
         return result;
     }
 }
