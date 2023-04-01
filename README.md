@@ -1,7 +1,7 @@
 # Changes
 * I don’t like that swear words are included in the solution.
 Found a .txt file of bad words and used that to write a new file that does not include these words.
-Copied a program to do this from: https://www.geeksforgeeks.org/java-program-delete-certain-text-file/.  Working txt file is cleanWords.txt
+Copied a [program](https://www.geeksforgeeks.org/java-program-delete-certain-text-file/) to do this.  Working txt file is cleanWords.txt
 
 # Working Program
 Main located in: src\main\java\letterboxedsolver\game.java
@@ -61,7 +61,7 @@ To write a program that finds all valid two-word solutions, given a puzzle defin
    * Using a hashmap to organize words by first letter helps in that I can check the last letter of every word and search only through the arraylist at the corresponding character.
    * How to check that all letters are used?
    
-# Implementation / Observations 
+# Implementation
 Step 1)
 Had to change maven version to 1.8 from 1.7 because I used a lambda expression.
 
@@ -79,6 +79,7 @@ In order to check if the two word solution contains all the characters of the pr
 # Notes
 * Split certain methods into their own classes in order to adhere to single responsibility to improve testability, reusability, and readability.
 * Applied unit testing to verify functionality and as a form of acceptance criteria.
+* The Letterboxed game uses the [Oxford Dictionary of English](https://twitter.com/thegridkid/status/1151191845222998016?lang=en)
 
 # Improvements
 * option to solve in more words than 2
