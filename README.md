@@ -1,7 +1,10 @@
-# Changes
+# Changes / Important
+* Done program according to the assignment is located at commit [9fd28e105dd5ee6f551bd3c836efa26fa4dc5911](https://github.com/asan6602/LetterBoxedSolver/tree/9fd28e105dd5ee6f551bd3c836efa26fa4dc5911).  Subsequent commits are readme / improvements.
 * I don’t like that swear words are included in the solution.
 Found a .txt file of bad words and used that to write a new file that does not include these words.
 Copied a [program](https://www.geeksforgeeks.org/java-program-delete-certain-text-file/) to do this.  Working txt file is cleanWords.txt
+
+
 
 # Working Program
 Main located in: src\main\java\letterboxedsolver\game.java
@@ -82,8 +85,8 @@ In order to check if the two word solution contains all the characters of the pr
 * Applied unit testing to verify functionality and as a form of acceptance criteria.
 * The Letterboxed game uses the [Oxford Dictionary of English](https://twitter.com/thegridkid/status/1151191845222998016?lang=en)
 
-# Improvements
-* option to solve in more words than 2
-* continue to clean words
-* find a txt file using the Oxford Dictionary of English and read from that one instead
-* Convert to Kotlin using intellij
+# Improvements, to do
+- [ ] continue to clean words
+- [ ] option to solve in more words than 2
+- [ ] find a txt file using the Oxford Dictionary of English and read from that one instead
+- [ ] Convert to Kotlin using intellij
