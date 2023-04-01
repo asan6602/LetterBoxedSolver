@@ -25,7 +25,6 @@ public class game {
         ArrayList<ArrayList<Character>> rows = validator.convertInput(input);
     
         if(rows == null) {
-            System.out.println("Input is invalid");
             return null;
         }
 

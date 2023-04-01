@@ -18,6 +18,7 @@ public class validator {
 
         //check if input is in xxx,xxx,xxx format
         if(!input.matches("[a-zA-Z]{3},[a-zA-Z]{3},[a-zA-Z]{3},[a-zA-Z]{3}")) {
+            System.out.println("Input is invalid because it is not in <xxx,xxx,xxx> format");
             return result;
         }
 
@@ -34,10 +35,15 @@ public class validator {
 
             //good to go if set is the same size as the letter string
             if(testSet.size() == justLetters.length()) {
-                result = true;
+                return true;
+            }
+            else {
+                System.out.println("Input is invalid because it contains duplicate elements");
+                return result;
             }
             
         }
+        System.out.println("Input is invalid because is it the wrong size.");
         return result;
     }
 
