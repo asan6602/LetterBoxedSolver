@@ -92,6 +92,34 @@ public class game {
     public HashMap<Character, ArrayList<String>> checkRows(ArrayList<ArrayList<Character>> rows, HashMap<Character, ArrayList<String>> words) {
         HashMap<Character, ArrayList<String>> result = new HashMap<>();
 
+        //iterating through a hashmap, for each and lambda
+        words.forEach((key, value) -> {
+            for(String s: value) {
+                boolean validWord = true;
+                
+                //iterate through the characters of the string
+                for(int i =0; i < s.length() - 1; i++) {
+                    ArrayList<Character> row = new ArrayList<>();
+                    
+                    //check which row contains the letter
+                    for(ArrayList<Character> r: rows) {
+                        if(r.contains(s.charAt(i))) {
+                            row = r;
+                        }
+                    }
+
+                    //if the next character is within the row, then the word is not valid
+                    if(row.contains(s.charAt(i + 1))) {
+                        validWord = false;
+                        break;
+                    }
+                }
+                
+                if(validWord) {
+                    result.computeIfAbsent(key, k -> new ArrayList<>()).add(s);
+                }
+            }
+        });
         return result;
     }
 
