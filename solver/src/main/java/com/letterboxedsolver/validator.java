@@ -47,7 +47,23 @@ public class validator {
      * @return 4 ArrayLists stored in a 2d ArrayList
      */
     public ArrayList<ArrayList<Character>> convertInput(String input) {
+        input = input.toLowerCase();
+
+        if(!validateInput(input)) {
+            return null;
+        }
+        
         ArrayList<ArrayList<Character>> result =  new ArrayList<ArrayList<Character>>();
+
+        String[] arrOfStrings = input.split(",");
+
+        for(String s: arrOfStrings) {
+            ArrayList<Character> chars = new ArrayList<Character>();
+            for(char c: s.toCharArray()) {
+                chars.add(c);
+            }
+            result.add(chars);
+        }
 
         return result;
     }
