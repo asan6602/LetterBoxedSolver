@@ -5,7 +5,7 @@ Copied a program to do this from: https://www.geeksforgeeks.org/java-program-del
 
 # Working Program
 Main located in: src\main\java\letterboxedsolver\game.java
-* running main will prompt you to enter the problem in the”xxx,xxx,xxx” format.
+* running main will prompt you to enter the problem in the ”xxx,xxx,xxx,xxx” format.
 * after entering an input, your solutions will be printed along with the number of solutions and the time it took to compute the solutions.
 * Output for: “ing,aht,oyc,pru”
 
