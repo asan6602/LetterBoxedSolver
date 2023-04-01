@@ -4,8 +4,13 @@ Main located in: src\main\java\letterboxedsolver\game.java
 * after entering an input, your solutions will be printed along with the number of solutions and the time it took to compute the solutions.
 * Output for: “ing,aht,oyc,pru”
 
-
 ![Screenshot 2023-03-31 230213](https://user-images.githubusercontent.com/110870409/229262741-d8c96260-18ca-42f8-a9a3-e0eb0b32eaf7.png)
+
+
+# Changes
+I don’t like that swear words are included in the solution.
+Found a .txt file of bad words and used that to write a new file that does not include these words.
+Copied a program to do from: https://www.geeksforgeeks.org/java-program-delete-certain-text-file/.  Working txt file is cleanWords.txt
 
 
 # Letter Boxed Summary
@@ -71,11 +76,6 @@ To deal with words that adhere to containing letters contained in the problem.
 To deal with words that do not have consecutive letters belonging to the same row.
 Step 4) 
 In order to check if the two word solution contains all the characters of the problem, I concatenated them and then converted that string into an arraylist so I can use the .contains method.
-
-Post Completed Solution)
-I don’t like that swear words are included in the solution.
-Found a .txt file of bad words and used that to write a new file that does not include these words.
-Copied a program to do from: https://www.geeksforgeeks.org/java-program-delete-certain-text-file/.
 
 # Notes
 * Split certain methods into their own classes in order to adhere to single responsibility to improve testability, reusability, and readability.
