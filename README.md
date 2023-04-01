@@ -1,3 +1,8 @@
+# Changes
+I don’t like that swear words are included in the solution.
+Found a .txt file of bad words and used that to write a new file that does not include these words.
+Copied a program to do from: https://www.geeksforgeeks.org/java-program-delete-certain-text-file/.  Working txt file is cleanWords.txt
+
 # Working Program
 Main located in: src\main\java\letterboxedsolver\game.java
 * running main will prompt you to enter the problem in the”xxx,xxx,xxx” format.
@@ -5,12 +10,6 @@ Main located in: src\main\java\letterboxedsolver\game.java
 * Output for: “ing,aht,oyc,pru”
 
 ![Screenshot 2023-03-31 230213](https://user-images.githubusercontent.com/110870409/229262741-d8c96260-18ca-42f8-a9a3-e0eb0b32eaf7.png)
-
-
-# Changes
-I don’t like that swear words are included in the solution.
-Found a .txt file of bad words and used that to write a new file that does not include these words.
-Copied a program to do from: https://www.geeksforgeeks.org/java-program-delete-certain-text-file/.  Working txt file is cleanWords.txt
 
 
 # Letter Boxed Summary
