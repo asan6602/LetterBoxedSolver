@@ -179,7 +179,7 @@ public class game {
         game g  = new game("solver\\data\\cleanWords.txt");
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter problem in format <xxx,xxx,xxx>: ");
+        System.out.print("Enter problem in format <xxx,xxx,xxx,xxx>: ");
 
         String input = scanner.nextLine();
 
