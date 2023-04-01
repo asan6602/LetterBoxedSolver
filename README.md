@@ -73,6 +73,7 @@ Step 3)
 I created two helper methods.
 To deal with words that adhere to containing letters contained in the problem.
 To deal with words that do not have consecutive letters belonging to the same row.
+
 Step 4) 
 In order to check if the two word solution contains all the characters of the problem, I concatenated them and then converted that string into an arraylist so I can use the .contains method.
 
