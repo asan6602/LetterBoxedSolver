@@ -110,5 +110,5 @@ In order to check if the two word solution contains all the characters of the pr
  * Most important problem here would be to check that two word solution does not solve the problem already.
 - [ ] Find a txt file using the Oxford Dictionary of English and read from that one instead
  * Found a [txt](https://raw.githubusercontent.com/sujithps/Dictionary/master/Oxford%20English%20Dictionary.txt) file.
-   * The format of this file is word and defition on same line.  Can use readLine, but would have to split by " " and just use the first value
+   * The format of this file is word and definition on same line.  Can use readLine, but would have to split by " " and just use the first value
  * Found an [api](https://developer.oxforddictionaries.com/), but it seems to be paywalled.
