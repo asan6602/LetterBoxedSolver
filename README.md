@@ -43,8 +43,7 @@ To write a program that finds all valid two-word solutions, given a puzzle defin
   * How to add to existing ArrayList<String>>?
     * computeIfAbsent, returns the new or old value associated with the specified key
   * Why use a Hashmap?
-    * I want to sort words by first letter.  The key is the character of the first letter, while the value is an Arraylist of characters beginning with the key letter.
-    * Should make searching faster.
+    * I want to sort words by first letter.  The key is the character of the first letter, while the value is an Arraylist of words beginning with the key letter.
 
 * Create a method that takes in a string in the format of “XXX,XXX,XXX,XXX” where X are unique letters.  Converts them into a 2d ArrayList<Character> with the arraylists being a list of characters that make up a row.  Verifies that all characters are unique.
   * Why use ArrayList?
