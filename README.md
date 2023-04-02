@@ -8,14 +8,13 @@ Copied a [program](https://www.geeksforgeeks.org/java-program-delete-certain-tex
 * The Letterboxed game uses the [Oxford Dictionary of English](https://twitter.com/thegridkid/status/1151191845222998016?lang=en) and filters offensive words.
 
 
-
 # Working Program
 Main located in: src\main\java\letterboxedsolver\game.java
 * running main will prompt you to enter the problem in the ”xxx,xxx,xxx,xxx” format.
 * after entering an input, your solutions will be printed along with the number of solutions and the time it took to compute the solutions.
 * Output for: “ing,aht,oyc,pru”
 
-![Screenshot 2023-03-31 230213](https://user-images.githubusercontent.com/110870409/229262741-d8c96260-18ca-42f8-a9a3-e0eb0b32eaf7.png)
+![Merged_document](https://user-images.githubusercontent.com/110870409/229323903-3de50666-302d-416f-971b-d627ed5a9c60.png)
 
 
 # Letter Boxed Summary
@@ -28,8 +27,10 @@ Rules:
 * Last letter of a word becomes the first letter of the next word
 * Letters can be reused
 
+
 # Program Goal
 To write a program that finds all valid two-word solutions, given a puzzle definition and a word list file. 
+
 
 # Plan of Attack / Initial Design
 * Create a method that takes in a .txt file (1 word for each line)  and returns a Hashmap<Character, ArrayList<String>> while dropping words that are 2 letters or less, containing non-letter characters, and words containing the same letter twice in a row
@@ -67,6 +68,7 @@ To write a program that finds all valid two-word solutions, given a puzzle defin
    * Using a hashmap to organize words by first letter helps in that I can check the last letter of every word and search only through the arraylist at the corresponding character.
    * How to check that all letters are used?
    
+   
 # Implementation
 Step 1)
 Had to change maven version to 1.8 from 1.7 because I used a lambda expression.
@@ -83,8 +85,9 @@ To deal with words that do not have consecutive letters belonging to the same ro
 Step 4) 
 In order to check if the two word solution contains all the characters of the problem, I concatenated them and then converted that string into an arraylist so I can use the .contains method.
 
-# Improvements, to do
-- [ ] continue to clean words
+
+# Improvements
+- [X] continue to clean words
 - [ ] option to solve in more words than 2
 - [ ] find a txt file using the Oxford Dictionary of English and read from that one instead
 - [ ] Convert to Kotlin using intellij
