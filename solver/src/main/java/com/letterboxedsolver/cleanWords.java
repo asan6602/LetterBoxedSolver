@@ -10,10 +10,10 @@ public class cleanWords
 	public static void main(String[] args) throws IOException
 	{
 		// PrintWriter object for output.txt
-		PrintWriter pw = new PrintWriter("solver\\data\\cleanWords.txt");
+		PrintWriter pw = new PrintWriter("solver\\data\\cleanerWords.txt");
 		
 		// BufferedReader object for input.txt
-		BufferedReader br1 = new BufferedReader(new FileReader("solver\\data\\words.txt"));
+		BufferedReader br1 = new BufferedReader(new FileReader("solver\\data\\cleanWords.txt"));
 		
 		String line1 = br1.readLine();
 		
@@ -23,7 +23,7 @@ public class cleanWords
 			boolean flag = false;
 			
 			// BufferedReader object for delete.txt
-			BufferedReader br2 = new BufferedReader(new FileReader("solver\\data\\badwords.txt"));
+			BufferedReader br2 = new BufferedReader(new FileReader("solver\\data\\morebadwords.txt"));
 			
 			String line2 = br2.readLine();
 			
