@@ -84,6 +84,24 @@ Step 4)
 In order to check if the two word solution contains all the characters of the problem, I concatenated them and then converted that string into an arraylist so I can use the .contains method.
 
 
+# Key Code Snippets
+* Adding to an existing or non-existing ArrayList tied to a key in a HashMap. (readText.java line 52)
+
+![Screenshot 2023-04-02 105115](https://user-images.githubusercontent.com/110870409/229360597-88cf143d-87a2-4cd0-ab2b-faa9ae4a409a.png)
+
+* Validating that an input contains no duplicates. (validator.java line 31-43)
+
+![Screenshot 2023-04-02 105441](https://user-images.githubusercontent.com/110870409/229360818-70269bd9-ae3c-4710-947a-04bebd245c3a.png)
+
+* Checking that words do not contain consecutive characters from the same row. (game.java 102-121)
+
+![Screenshot 2023-04-02 105714](https://user-images.githubusercontent.com/110870409/229360980-63ff04f8-6fa3-4fa9-b76e-40c33239b586.png)
+
+* Checking that a two word combination contains all the letters of the problem. (game.java 143-165)
+
+![Screenshot 2023-04-02 105930](https://user-images.githubusercontent.com/110870409/229361173-ceb6e5b8-a349-41da-b5b2-5601206381b2.png)
+
+
 # Improvements
 - [X] Continue to clean words
 - [X] Convert to Kotlin using intellij
