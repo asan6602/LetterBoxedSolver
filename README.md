@@ -14,7 +14,7 @@ Main located in: src\main\java\letterboxedsolver\game.java
 * after entering an input, your solutions will be printed along with the number of solutions and the time it took to compute the solutions.
 * Output for: “ing,aht,oyc,pru”
 
-![Screenshot 2023-03-31 230213](https://user-images.githubusercontent.com/110870409/229262741-d8c96260-18ca-42f8-a9a3-e0eb0b32eaf7.png)
+![Merged_document](https://user-images.githubusercontent.com/110870409/229323903-3de50666-302d-416f-971b-d627ed5a9c60.png)
 
 
 # Letter Boxed Summary
