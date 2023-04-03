@@ -139,28 +139,30 @@ public class game {
 
                 ArrayList<String> wordStartingWithLastCharacter = puzzleWords.get(lastLetter);
 
-                //checking words that beginng with last letter of first word
-                for(String word2: wordStartingWithLastCharacter) {
-                    boolean valid = true;
-                    String combinedWord = word1+word2;
+                if(wordStartingWithLastCharacter != null) {
+                    //checking words that beginng with last letter of first word
+                    for(String word2: wordStartingWithLastCharacter) {
+                        boolean valid = true;
+                        String combinedWord = word1+word2;
 
-                    ArrayList<Character> combinedList = new ArrayList<Character>();
-                    for (char characterCombined : combinedWord.toCharArray()) {
-                        combinedList.add(characterCombined);
-                    }
-
-                    //check that all problemCharacters are present in the two words
-                    for (char characterProblem: problemCharacters) {
-                        if(!combinedList.contains(characterProblem)) {
-                            valid = false;
-                            break;
+                        ArrayList<Character> combinedList = new ArrayList<Character>();
+                        for (char characterCombined : combinedWord.toCharArray()) {
+                            combinedList.add(characterCombined);
                         }
-                    }
-                    if (valid) {
-                        String[] solution = new String[2];
-                        solution[0] = word1;
-                        solution[1] = word2;
-                        result.add(solution);
+
+                        //check that all problemCharacters are present in the two words
+                        for (char characterProblem: problemCharacters) {
+                            if(!combinedList.contains(characterProblem)) {
+                                valid = false;
+                                break;
+                            }
+                        }
+                        if (valid) {
+                            String[] solution = new String[2];
+                            solution[0] = word1;
+                            solution[1] = word2;
+                            result.add(solution);
+                        }
                     }
                 }
                    
@@ -185,6 +187,7 @@ public class game {
         for(String[] combo: result) {
             System.out.println(combo[0] + " " + combo[1]);
         }
+
         System.out.println("There are " + result.size() + " possible solutions");
 
         long ms = System.currentTimeMillis() - start;
