@@ -183,11 +183,14 @@ public class game {
 
         ArrayList<String[]> result = g.playGame(input);
 
-        for(String[] combo: result) {
-            System.out.println(combo[0] + " " + combo[1]);
+        if (result != null) {
+            for(String[] combo: result) {
+                System.out.println(combo[0] + " " + combo[1]);
+            }
+    
+            System.out.println("There are " + result.size() + " possible solutions");
         }
 
-        System.out.println("There are " + result.size() + " possible solutions");
 
         long ms = System.currentTimeMillis() - start;
         System.out.println("Time elapsed: " + ms + " ms.");
