@@ -7,7 +7,7 @@ Copied a [program](https://www.geeksforgeeks.org/java-program-delete-certain-tex
 * Added a zipfile of my implementation, but in Kotlin.  Created using Intellij. solverKotlin.zip
 * There is a bug that causes the program to break if I try to access a list from a hashmap that has not been created because there were no valid words.  Can fix if I do null checking, in class atm.  Found using input thl,mic,vrb,yoa (breaks on y)
   * FIXED
-* my file paths use \\.
+* my file paths uses two \
 
 
 # Working Program
