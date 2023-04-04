@@ -116,3 +116,4 @@ In order to check if the two word solution contains all the characters of the pr
  * Found an [api](https://developer.oxforddictionaries.com/), but it seems to be paywalled.
 - [ ] [a*search](https://www.youtube.com/watch?v=zSlgT6j0kQU)?
 - [ ] [stream/filter](https://www.geeksforgeeks.org/stream-filter-java-examples/)?
+- [ ] I can make solutions faster by using a hashset and comparing the size of the hashset to the size of problemcharacters.
