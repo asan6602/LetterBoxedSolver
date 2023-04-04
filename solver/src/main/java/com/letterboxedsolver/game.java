@@ -2,6 +2,7 @@ package com.letterboxedsolver;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class game {
@@ -145,18 +146,16 @@ public class game {
                         boolean valid = true;
                         String combinedWord = word1+word2;
 
-                        ArrayList<Character> combinedList = new ArrayList<Character>();
+                        HashSet<Character> combinedList = new HashSet<>();
                         for (char characterCombined : combinedWord.toCharArray()) {
                             combinedList.add(characterCombined);
                         }
 
                         //check that all problemCharacters are present in the two words
-                        for (char characterProblem: problemCharacters) {
-                            if(!combinedList.contains(characterProblem)) {
-                                valid = false;
-                                break;
-                            }
+                        if(combinedList.size() != problemCharacters.size()) {
+                            valid = false;
                         }
+    
                         if (valid) {
                             String[] solution = new String[2];
                             solution[0] = word1;
