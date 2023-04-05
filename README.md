@@ -53,15 +53,15 @@ To write a program that finds all valid two-word solutions, given a puzzle defin
     * Arraylist has the .contains method, which I can use to easily check if a character is present in a row.
   * How to read the format?
     * Split by comma, then iterate through characters of split strings.
-  * How to check that all characters are unique.
+  * How to check that all characters are unique?
     * Use a set and add characters to the set, compare the sizes of the set to the string.
 
 * Create a method to retrieve puzzle words that takes in a string in the format of “XXX,XXX,XXX,XXX” where X are unique letters; and returns a Hashmap<Character, ArrayList<String>> of the valid puzzle words.
-  * How to check to make sure that words on the same line aren’t consecutive.
+  * How to check to make sure that words on the same line aren’t consecutive?
     * Iterate through the string while checking if the next character is any of the other two characters that share the row of the current character.
   * How to check which row to check against?
     * Iterate through all the rows to see which row contains the character.
-  * How to check if characters of a string are present in the problem
+  * How to check if characters of a string are present in the problem?
     * Put all problem letters into an ArrayList
     * Iterate through string and use ArrayList.contains()
 
